@@ -54,7 +54,7 @@ class Student():
         print(f"Total Marks: {self.total_marks} / {self.total_subjects * 100}")
         self.percentage = self.total_marks / self.total_subjects
         print(f"Percentage: {self.percentage:.2f}%")
-        self.grade = self.__handle_grade(self.total_marks)
+        self.grade = self.__handle_grade(self.percentage)
         print(f"Grade: {self.grade}")
 
     # private methode to handle grade ___
