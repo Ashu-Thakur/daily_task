@@ -78,20 +78,27 @@ class Student():
             
 
 
-count = 1
 while(True):
+
     total_subject = int (input("Enter Total Subject_count :"))
     marks = []
+
     for i in range(1,total_subject + 1):
+
         try :
             number = float(input(f"Enter Your Marks for subject number {i} :"))
             if 0 <= number <= 100:
                 marks.append(number)
+
         except Exception as e :
             print("Invalid Input")
+            break
 
     print("-------------Summary--------------")
+    # creating instance of Student class
     obj = Student(count_of_subject = total_subject, marks = marks)
+    
+    # format printing  methode
     obj.priniting_output()
 
     # ask user for reapeat the task or not
